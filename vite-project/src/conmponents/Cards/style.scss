@@ -160,6 +160,7 @@
         }
 
         .complete {
+            padding: 0px 5px;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -169,7 +170,6 @@
             font-size: 12px;
             line-height: 15px;
             color: #68B266;
-            width: 76px;
             height: 23px;
             background: rgba(131, 194, 157, 0.2);
             border-radius: 4px;

@@ -23,13 +23,14 @@ export default function Todos({ todos, idx, taskState, task, Snapshot }) {
             height: 'auto',
             margin: '10px auto',
             background: '#FFFFFF',
-            borderRadius: '16px'
+            borderRadius: '16px',
+            boxShadow:'none'
           }} style={{
             transform: snapshot.isDragging ? 'rotate(3deg)' : 'none',
           }}>
             <CardContent>
               <div className='navigation'>
-                <span className={todos.state === 'Low' && task.title === 'To Do' || task.title === 'On Progress' ? 'low' : todos.state === 'High' && task.title === 'To Do' || task.title === 'On Progress' ?
+                <span className={todos.state === 'Low' && task.title === 'To Do' || task.title === 'On Progress' ? 'low': todos.state === 'High' && task.title === 'To Do' || task.title === 'On Progress' ?
                   'high' : todos.state === 'Completed' || task.title === 'Done' ? 'complete' : 'low'}>{task.title === 'Done' ?
                     'Completed' : todos.state === 'Completed' && task.title === 'On Progress' ? 'Low' : todos.state === 'Completed' && task.title === 'To Do' ? 'Low' : todos.state}</span>
                 <span className="threedot">...
@@ -72,11 +73,11 @@ export default function Todos({ todos, idx, taskState, task, Snapshot }) {
                 {todos.description}
               </div>
               <div className="bottomcontainer">
-                <div className="avatars">
+                <div  className="avatars">
                   <AvatarGroup >
                     <Avatar sx={{
                       width: '24px',
-                      height: '24px'
+                      height: '24px',
                     }}
                       alt="Remy Sharp" src={todos.img2} />
                     <Avatar sx={{
