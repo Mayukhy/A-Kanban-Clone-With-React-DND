@@ -1,0 +1,139 @@
+@mixin md {
+    @media screen and (min-width:1200px) {
+        @content ;
+    }
+}
+
+@mixin sm {
+    @media screen and (max-width:800px) {
+        @content ;
+    }
+}
+
+@mixin xsm {
+    @media screen and (max-width:450px) {
+        @content ;
+    }
+}
+
+
+.navcontainer {
+    padding: 20px 40px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    @include sm {
+        padding: 10px 0px;
+    }
+
+    .left {
+        .searchbg {
+            box-sizing: border-box;
+            background: #F5F5F5;
+            border-radius: 6px;
+            display: flex;
+            padding: 10px 10px;
+            gap: 10px;
+
+            input {
+                margin-top: 2px;
+                margin-left: 4px;
+                background: #F5F5F5;
+                width: auto;
+                border: none;
+                outline: none;
+
+                &::placeholder {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    color: #787486;
+                }
+
+                @include sm {
+                    width: 150px !important;
+                }
+            }
+
+        }
+    }
+
+    .right {
+        display: flex;
+        justify-content: space-between;
+
+        .icons {
+            margin-left: 10px;
+            display: flex;
+            margin-top: 5px;
+            gap: 15px;
+
+            @include sm {
+                display: none;
+            }
+        }
+
+        .profile {
+            margin-left: 50px;
+            display: flex;
+
+            @include sm {
+                margin-left: 10px;
+            }
+
+            @include xsm {
+                display: none;
+            }
+
+            .details {
+
+                .Name {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 19px;
+                    text-align: right;
+                    color: #0D062D;
+
+                    @include sm {
+                        font-size: 13px;
+                    }
+                }
+
+                .location {
+                    font-family: 'Inter';
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 14px;
+                    line-height: 17px;
+                    text-align: right;
+                    color: #787486;
+
+                    @include sm {
+                        font-size: 11px;
+                    }
+                }
+            }
+
+        }
+
+        .profilepic {
+            margin-left: 15px;
+            gap: 8px;
+            display: flex;
+
+            .pic {
+                margin-top: -7px;
+            }
+
+            .dropdownicon {
+                margin-top: 8px;
+            }
+        }
+    }
+
+}

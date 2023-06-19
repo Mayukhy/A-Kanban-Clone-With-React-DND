@@ -1,0 +1,213 @@
+@mixin md {
+  @media screen and (min-width:1200px) {
+    @content ;
+  }
+}
+
+@mixin sm {
+  @media screen and (max-width:800px) {
+    @content ;
+  }
+}
+
+
+
+
+::-webkit-scrollbar {
+  display: none !important;
+}
+
+// Top Left Menu Icon Start
+
+.TopleftMenuicon {
+  margin-left: 14px;
+  padding-top: 2px;
+  width: 46px;
+  height: 19px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+
+  color: #787486;
+}
+
+.devider {
+  margin: auto;
+  width: 224px;
+  height: 0px;
+  border: 1px solid #DBDBDB;
+}
+
+// Top Left Menu Icon End
+
+
+
+// Bottom Left Menu Icon Start
+.Projects {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 22px;
+  margin-top: 15px;
+
+  .Proname {
+    margin-top: 2px;
+    height: 15px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 15px;
+    /* identical to box height */
+    text-transform: uppercase;
+
+    color: #787486;
+  }
+}
+
+.dots {
+  margin-top: -5px;
+  margin-left: 12px;
+}
+
+.threedot {
+  margin-right: 12px;
+  margin-top: -8px;
+  margin-left: 45px;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.projectTopic {
+  width: auto;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+  color: #787486;
+}
+
+.lightbackgroundedge {
+  border-radius: 50%;
+  width: 66px;
+  height: 66px;
+  background: #ebeaea;
+  margin: 55px auto -35px auto;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
+}
+
+.lightbackground {
+  position: absolute;
+  left: 43%;
+  margin-top: 15px;
+  display: flex;
+  width: 33px;
+  height: 33px;
+  z-index: 9999;
+  background: rgba(252, 214, 74, 0.7);
+  filter: blur(17px);
+}
+
+.msgcontainer {
+  margin-bottom: 20px;
+  padding: 20px 0px;
+  width: 206px;
+  height: 200px;
+  margin: -25px auto 20px auto;
+  background: #ebeaea;
+  border-radius: 16px;
+
+  .heading {
+    margin-top: 20px !important;
+    display: flex;
+    justify-content: center;
+    height: 17px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    /* identical to box height */
+    color: #000000;
+  }
+
+  .description {
+    padding: 0px 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: center;
+    height: 60px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    color: #787486;
+  }
+
+  .msg {
+    display: flex;
+    justify-content: center;
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    width: 166px;
+    height: 40px;
+    text-align: center;
+    background: #FFFFFF;
+    border-radius: 4px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+  }
+}
+
+// Bottom Left Menu Icon End
+
+
+// Logo part Start
+
+.logo {
+  display: flex;
+  margin: 0.1px auto;
+  padding-bottom: 15px;
+  gap: 10px;
+  padding-top: 20px;
+  padding-left: 10px;
+  margin-left: 7px;
+
+  @include md {
+    padding-top: 30px;
+    padding-bottom: 23px;
+  }
+
+  .text {
+    height: 24px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 24px;
+
+    color: #0D062D;
+  }
+
+  .iconlogo {
+    margin-top: 2px;
+    margin-left: 32px;
+    cursor: pointer;
+
+  }
+}

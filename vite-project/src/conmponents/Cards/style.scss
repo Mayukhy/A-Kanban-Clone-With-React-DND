@@ -1,0 +1,251 @@
+@mixin md {
+    @media screen and (min-width:1200px) {
+        @content ;
+    }
+}
+
+@mixin sm {
+    @media screen and (max-width:800px) {
+        @content ;
+    }
+}
+
+
+.cardcontainer {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+
+    .cardstate {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        flex-wrap: wrap;
+
+        .workcardcontainer {
+            width: 375px;
+            height: 625px;
+            overflow-y: scroll;
+            background: #F5F5F5;
+            border-radius: 16px;
+            margin-bottom: 40px;
+
+            .headnavigation {
+                position: absolute;
+                backdrop-filter: blur(10px);
+                margin-left: 4.5px;
+                width: 365px;
+            }
+
+            .header {
+                display: flex;
+                padding: 0px 20px;
+                margin-top: 25px;
+                margin-bottom: 10px;
+                justify-content: space-between;
+
+                .left {
+                    display: flex;
+                    gap: 10px;
+
+                    .dot {
+                        margin-top: -4.5px;
+                    }
+
+                    .todo {
+
+                        height: 19px;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 600;
+                        font-size: 16px;
+                        line-height: 19px;
+                        color: #0D062D;
+                    }
+
+                    .no {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        box-sizing: border-box;
+                        width: 20px;
+                        height: 20px;
+                        background: #E0E0E0;
+                        border-radius: 10px;
+                        font-family: 'Inter';
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 12px;
+                        line-height: 15px;
+                        color: #625F6D;
+
+                    }
+                }
+
+                .right {
+                    padding-top: 8px;
+                    margin-top: -10px;
+                    margin-bottom: 0;
+                }
+
+            }
+
+            .botttomborder {
+                margin: 15px auto;
+                width: 324px;
+                height: 0px;
+                background: #800080;
+                border: 2px solid #5030E5;
+            }
+
+            .botttomborder1 {
+
+                margin: 23px auto;
+                width: 314px;
+                height: 0px;
+                background: #800080;
+                border: 2px solid #FFA500;
+            }
+
+            .botttomborder2 {
+                margin: 23px auto;
+                width: 314px;
+                height: 0px;
+                background: #800080;
+                border: 2px solid #8BC48A;
+            }
+        }
+    }
+
+    .navigation {
+        margin-top: 10px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+
+        .low {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: #D58D49;
+            padding: 0px 5px;
+            width: auto;
+            height: 23px;
+            background: rgba(223, 168, 116, 0.2);
+            border-radius: 4px;
+        }
+
+        .high {
+            padding: 0px 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: #D8727D;
+            width: auto;
+            height: 23px;
+            background: rgba(216, 114, 125, 0.1);
+            border-radius: 4px;
+        }
+
+        .complete {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 15px;
+            color: #68B266;
+            width: 76px;
+            height: 23px;
+            background: rgba(131, 194, 157, 0.2);
+            border-radius: 4px;
+        }
+    }
+
+    .heading {
+        width: auto;
+        height: 22px;
+        margin-bottom: 10px;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 22px;
+        /* identical to box height */
+        color: #0D062D;
+    }
+
+    .imgcontainer {}
+
+    .description {
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 15px;
+        color: #787486;
+    }
+
+    .bottomcontainer {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 30px;
+
+        .avatars {
+            margin-top: -5px;
+            margin-right: 40px;
+            margin-left: -7px;
+        }
+
+        .comments {
+            display: flex;
+            gap: 5px;
+
+            .msgicon {}
+
+            .texts {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                /* identical to box height */
+                color: #787486;
+                margin-top: 2px;
+            }
+        }
+
+        .files {
+            display: flex;
+            gap: 5px;
+
+            .fileicon {
+                margin-top: -1px;
+            }
+
+            .fileNo {
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 15px;
+                color: #787486;
+                margin-top: 2px;
+            }
+        }
+    }
+}

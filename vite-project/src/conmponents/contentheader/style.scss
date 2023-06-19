@@ -1,0 +1,216 @@
+@mixin md {
+    @media screen and (min-width:1200px) {
+        @content ;
+    }
+}
+
+@mixin sm {
+    @media screen and (max-width:800px) {
+        @content ;
+    }
+}
+
+
+
+
+
+.maincontainer {
+    margin-top: 50px;
+}
+
+.firstdiv {
+    padding: 0px 40px;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    @include sm {
+        justify-content: center;
+    }
+
+    .left {
+        display: flex;
+        gap: 16px;
+
+        .mobileapp {
+            width: 253px;
+            height: 56px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 600;
+            font-size: 46px;
+            line-height: 56px;
+            text-transform: capitalize;
+            color: #0D062D;
+
+            @include sm {
+                font-size: 35px;
+            }
+        }
+
+        .icon {
+            margin-top: 17px;
+        }
+    }
+
+    .right {
+        margin-top: 23px;
+        display: flex;
+        gap: 8px;
+
+        .invite {
+            width: 42px;
+            height: 19px;
+            font-family: 'Inter';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: capitalize;
+            color: #5030E5;
+        }
+
+        .users {
+            margin-top: -10px;
+            margin-left: 12px;
+            z-index: 999;
+
+            .twoplus {
+                z-index: 99;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 15px;
+                line-height: 18px;
+                text-transform: capitalize;
+                color: #D25B68;
+                margin-left: -10px;
+                margin-top: 2px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                box-sizing: border-box;
+                border-radius: 50%;
+                width: 38px;
+                height: 38px;
+                background: #F4D7DA;
+                border: 1px solid #FFFFFF;
+            }
+        }
+    }
+}
+
+.seconddiv {
+    flex-wrap: wrap;
+    padding: 0px 40px;
+    justify-content: space-between;
+    display: flex;
+    margin-top: 40px;
+    margin-bottom: 40px;
+
+    @include sm {
+        justify-content: center;
+        margin-top: 20px;
+        gap: 20px;
+    }
+
+    .left {
+        display: flex;
+        gap: 10px;
+
+        .dropdown {
+            display: flex;
+            box-sizing: border-box;
+            width: 122px;
+            height: 40px;
+            border: 1px solid #787486;
+            border-radius: 6px;
+            justify-content: center;
+            gap: 0px;
+
+            .dropdownicon {
+                margin-top: 10px;
+            }
+
+            .text {
+                width: auto;
+                height: 19px;
+                margin-top: 10px;
+                margin-left: 10px;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px !important;
+                line-height: 19px;
+                text-transform: capitalize;
+                margin-right: 10px;
+                color: #787486 !important;
+            }
+
+            .arrow {
+                margin-top: 10px;
+            }
+
+        }
+    }
+
+    .right {
+        display: flex;
+        gap: 20px;
+
+        .share {
+            display: flex;
+            box-sizing: border-box;
+            width: 97px;
+            height: 40px;
+            border: 1px solid #787486;
+            border-radius: 6px;
+            justify-content: center;
+            align-items: center;
+            gap: 5px;
+
+            .icon {
+                margin-top: 3px;
+            }
+
+            .text {
+                width: 45px;
+                height: 19px;
+                font-family: 'Inter';
+                font-style: normal;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 19px;
+                text-transform: capitalize;
+
+                color: #787486;
+            }
+        }
+
+        .partition {
+            width: 0px;
+            height: 28px;
+            border: 1px solid #787486;
+            margin-top: 6px;
+        }
+
+        .menu {
+            margin-top: 10px;
+        }
+    }
+}
+
+.dropdownstyle {
+    margin-left: -4px;
+    -webkit-appearance: none;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px !important;
+    line-height: 19px;
+    text-transform: capitalize;
+
+    color: #787486 !important;
+    border: none;
+    outline: none;
+}
